@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Br Architect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav id="navbar">
+            <div class="navbar-brand">
+                <span class="brand-name">
+                    <img class="brand-logo" src="https://th.bing.com/th?id=OIP.lKJxP2CUwjvpD7PfNfjU7gHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Logo">
+                    Br Architects Company 
+                </span>
+                <span class="menu-icon">
+            
+                </span>
+            </div>
+            <ul class="nav-menu">
+               <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="#about-us" class="nav-link">About Us</a></li>
+            <li class="nav-item"><button class="contact-button" onclick="document.getElementById('contact').scrollIntoView();">Contact Us</button></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+
+    <main id="main-content">
+        <section  id="home" class="image-section">
+            <div class="image-container">
+                <img src="./architect1.jpg" alt="architect" class="responsive-image">
+            </div>
+        </section>
+
+
+    
+        <section  id="projects" class="projects-section">
+            <h2 class="about-text">Projects</h2>
+            <p class="about-text">A team of highly skilled and creative professionals dedicated to transforming your vision into reality.</p>
+            <div class="projects-container">
+                <div class="project">
+                    <h5 class="project-title">Summer House</h5>
+                    <img src="./Summerhouse.jpg" alt="Summer" class="project-image">
+                </div>
+                <div class="project">
+                    <h5 class="project-title">Brick House</h5>
+                    <img src="./brickhouse2.jpg" alt="brickhouse2" class="project-image">
+                </div>
+                <div class="project">
+                    <h5 class="project-title">Renovated</h5>
+                    <img src="./renovatedhouse2.jpg" alt="renovatedhouse2" class="project-image">
+                </div>
+                <div class="project">
+                    <h5 class="project-title">Barn House</h5>
+                    <img src="./barnhouse2.jpg" alt="barn" class="project-image">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+        <section id="about-us" class="about-section">
+            <h3 class="about-title">About</h3>
+            <p class="about-text">Welcome to Br Architects Company! We specialize in designing beautiful and functional architecture for homes.
+         Our team is dedicated to creating spaces that are not only aesthetically pleasing but also highly practical and tailored to your needs. 
+        Whether you’re looking to build a new home or renovate an existing one, we bring your vision to life with innovative design solutions and meticulous attention to detail.</p>
+        </section>
+
+
+        <section id="about-us" class="architects-section">
+            <div class="architect">
+                <img src="./JohnDoe.jpg" alt="John Doe" class="architect-image">
+                <h5 class="architect-name">John Doe</h5>
+                <p class="architect-title">CEO & Founder</p>
+                <p class="architect-description">With over 20 years of experience in the field of architecture, John has a passion for creating innovative and sustainable designs that enhance the way people live.</p>
+                <p><button class="contact-button">Contact</button></p>
+            </div>
+            <div class="architect">
+                <img src="./JaneDoe.jpg" alt="Jane Doe" class="architect-image">
+                <h5 class="architect-name">Jane Doe</h5>
+                <p class="architect-title">Architect</p>
+                <p class="architect-description">a team of highly skilled and creative professionals dedicated to transforming your vision into reality.</p>
+                <p><button class="contact-button">Contact</button></p>
+            </div>
+            <div class="architect">
+                <img src="./MikeRoss.jpg" alt="Mike Ross" class="architect-image">
+                <h5 class="architect-name">Mike Ross</h5>
+                <p class="architect-title">Architect</p>
+                <p class="architect-description">a team of highly skilled and creative professionals dedicated to transforming your vision into reality.</p>
+                <p><button class="contact-button">Contact</button></p>
+            </div>
+            <div class="architect">
+                <img src="./DanStar.jpg" alt="Dan Star" class="architect-image">
+                <h5 class="architect-name">Dan Star</h5>
+                <p class="architect-title">Architect</p>
+                <p class="architect-description">a team of highly skilled and creative professionals dedicated to transforming your vision into reality.</p>
+                <p><button class="contact-button">Contact</button></p>
+            </div>
+        </section>
+
+
+        <section   id="contact" class="contact-section">
+            <h3 class="contact-title">Contact</h3>
+            <!-- <hr class="contact-divider"> -->
+            <p class="contact-text">Let's get in touch and talk about your next project.</p>
+            <form action="" target="_blank" class="contact-form">
+                <input type="text" placeholder="Name" required name="Name" class="contact-input"><br>
+                <input type="text" placeholder="Email" required name="Email" class="contact-input"><br>
+                <input type="text" placeholder="Subject" required name="Subject" class="contact-input"><br>
+                <textarea placeholder="Comment" required name="Comment" class="contact-textarea"></textarea><br>
+                <button type="submit" class="submit-button">SEND MESSAGE</button>
+            </form>
+        </section>
+
+
+        <section class="location-section">
+            <img src="./street.jpg" class="location-image" alt="Location">
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="footer-link"></a></p>
+    </footer>
+
+    <script>
+        function Menu(e) {
+            let list = document.querySelector('.nav-menu');
+            if (e.name === 'menu') {
+                e.name = "close";
+                list.classList.add('menu-open');
+            } else {
+                e.name = "menu";
+                list.classList.remove('menu-open');
+            }
+        }
+    </script>
+</body>
+</html>

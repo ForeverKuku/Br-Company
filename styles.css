@@ -1,0 +1,281 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+#navbar {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.brand-logo {
+    height: 24px;
+    margin-right: 8px;
+}
+
+.menu-icon {
+    font-size: 1.875rem;
+    cursor: pointer;
+    margin-left: 16px;
+    display: none; /* Hide by default */
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    transition: all 0.5s ease-in;
+}
+
+.nav-item {
+    margin: 0 16px;
+}
+
+.nav-link {
+    font-size: 1.25rem;
+    transition: color 0.5s;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link:hover {
+    color: #00bcd4;
+}
+
+.contact-button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 8px 24px;
+    margin: 0 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: none;
+    margin: 4px; /* Added margin */
+}
+
+.contact-button:hover {
+    background-color: #00a5b8;
+}
+
+.image-section, .projects-section, .about-section, .architects-section, .contact-section, .location-section {
+    padding: 16px;
+    margin-top: 80px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.project {
+    flex: 1 1 22%;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.project-title {
+    font-size: 1.5rem;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+}
+
+.projects-section h2,
+.projects-section p {
+    text-align: center;
+}
+
+.about-title, .contact-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.about-text, .contact-text {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.architects-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px; 
+    flex-wrap: wrap;
+}
+
+.architect {
+    flex: 1 1 22%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.architect img {
+    width: 100%;
+    height: auto;
+}
+
+.architect-name {
+    margin-top: 8px;
+}
+
+.contact-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-divider {
+    width: 50px;
+    border: 2px solid #007BFF;
+    margin: 10px auto;
+}
+
+.contact-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.location-image {
+    width: 100%;
+    height: auto;
+}
+
+.footer-link {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #00a5b8;
+}
+
+.menu-open {
+    top: 80px !important;
+    opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show menu icon on smaller screens */
+    }
+
+    .nav-menu {
+        display: none; /* Hide the menu by default */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding-left: 28px;
+        opacity: 0;
+        transition: all 0.5s ease-in;
+    }
+
+    .nav-menu.menu-open {
+        display: block; /* Show the menu when open */
+        top: 70px;
+        opacity: 1;
+    }
+
+    .nav-item {
+        margin: 8px 0;
+    }
+
+    .contact-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        flex: 1 1 100%;
+    }
+
+    .architects-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .architect {
+        flex: 1 1 100%;
+    }
+}
